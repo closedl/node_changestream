@@ -1,0 +1,37 @@
+<script type="text/javascript">
+    RED.nodes.registerType('listen-collection', {
+        category: 'input',
+        color: '#A6BBCF',
+        defaults: {
+            name: { value: "" },
+            mongoUrl: { value: "mongodb://localhost:27017", required: true },
+            dbName: { value: "db", required: true },
+            collection: { value: "collection", required: true }
+        },
+        inputs: 0,
+        outputs: 1,
+        icon: "mongodb.png",
+        label: function () {
+            return this.name || "MongoDB ChangeStream";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="listen-collection">
+<div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Node name">
+</div>
+<div class="form-row">
+    <label for="node-input-mongoUrl"><i class="fa fa-database"></i> MongoDB URI</label>
+    <input type="text" id="node-input-mongoUrl" placeholder="mongodb://localhost:27017">
+</div>
+<div class="form-row">
+    <label for="node-input-dbName"><i class="fa fa-table"></i> Database Name</label>
+    <input type="text" id="node-input-dbName" placeholder="Database name">
+</div>
+<div class="form-row">
+    <label for="node-input-collection"><i class="fa fa-table"></i> Collection</label>
+    <input type="text" id="node-input-collection" placeholder="Collection name">
+</div>
+</script>
