@@ -1,0 +1,19 @@
+{
+  "name": "listen-collection",
+  "version": "1.0.0",
+  "description": "A Node-RED node to watch MongoDB collection changes using Change Streams",
+  "main": "listen-collection.js",
+  "dependencies": {
+    "mongodb": "^4.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "",
+  "node-red": {
+    "nodes": {
+      "listen-collection": "listen-collection.js"
+    }
+  }
+}
